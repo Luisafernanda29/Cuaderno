@@ -102,3 +102,19 @@ Sub impuestos()
 End Sub
 
 """"""
+
+29 de agosto 2022
+
+Sub nombre()
+ 
+ fila = 4
+ 
+ For n = 1 To 15
+    nomb = InputBox("ingrese un nombre")
+    Hoja1.Cells(fila, 2) = nomb
+    fila = fila + 1
+ Next n
+ 
+End Sub
+
+"""""""
