@@ -155,3 +155,19 @@ Sub recolecta()
 End Sub
 
 """""""
+02 de septiembre 2022
+
+
+""programa"
+
+Sub lista()
+
+  For p = 2 To 21
+     nomb = Hoja1.Cells(p, 1)
+     ult = Len(nomb) - 1
+     Hoja1.Cells(p, 2) = Mid(nomb, ult, 2)
+  Next p
+  
+End Sub
+
+""""
