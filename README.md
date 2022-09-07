@@ -2,13 +2,14 @@
 Aqui podremos ver mis notas 
 
 # sub cuaderno
- msgbox "hola sena" 
- msgbox "hola mundo"
+  msgbox "hola sena" 
+  msgbox "hola mundo"
 # and sub
 
-""""
 
-26 de agosto 20222
+## 26 de agosto 20222
+
+### PROGRAMA:
 
 
 Sub impuesto()
@@ -59,11 +60,11 @@ Sub impuesto()
        End If
     End If
 End Sub
+---
 
-"""""""
+## 26 de agosto 2022
 
-""""
-26 de agosto 2022
+### PROGRAMA:
 
 Sub impuestos()
  
@@ -100,10 +101,11 @@ Sub impuestos()
  MsgBox "el total es: " & Total
 
 End Sub
+---
 
-""""""
+## 29 de agosto 2022
 
-29 de agosto 2022
+### PROGRAMA:
 
 Sub nombre()
  
@@ -116,12 +118,11 @@ Sub nombre()
  Next n
  
 End Sub
+---
 
-"""""""
+## 31 de agosto 2022
 
-31 de agosto 2022
-
-""""programa"""
+### PROGRAMA:
 
 Sub recolecta()
  tr = total_recaudado
@@ -153,12 +154,12 @@ Sub recolecta()
  MsgBox "promedio: " & promedio
  
 End Sub
+---
 
-"""""""
-02 de septiembre 2022
+## 02 de septiembre 2022
 
 
-""programa"
+### PROGRAMA:
 
 Sub lista()
 
@@ -169,5 +170,4 @@ Sub lista()
   Next p
   
 End Sub
-
-""""
+---
