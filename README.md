@@ -187,3 +187,23 @@ Sub lista()
 End Sub
 
 ```
+
+## 02 de septiembre 2022
+
+
+### PROGRAMA:
+
+```
+Sub lista 
+
+ for p = 2 to 21 
+  an = Hoja1.cells(p, 2)
+  mp = Hoja1.cells(p, 3) 
+  nomb = Hoja1.cells(p, 1)
+  ult = len (mp) - 1 
+  Hoja1.cells(p, 4) = Mid (an, 1, 2) + Mid (mp, ult, 2) + Mid (nomb, 1, 2)
+ next p 
+
+End sub
+
+```
