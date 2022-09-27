@@ -205,6 +205,7 @@ Sub lista
  next p 
 
 End sub
+```
 
 ## 09 de septiembre 2022
 
@@ -241,8 +242,8 @@ Sub recolecta()
  
  
 End Sub
-
 ```
+
 ## 09 de septiembre 2022
 
 ### PROGRAMA
@@ -267,5 +268,4 @@ Sub datos()
     Wend
     
 End Sub
-
 ```
