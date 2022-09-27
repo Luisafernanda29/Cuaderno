@@ -206,4 +206,66 @@ Sub lista
 
 End sub
 
+## 09 de septiembre 2022
+
+### PROGRAMA:
+
+```
+Sub recolecta()
+ tr = 0
+ sb = 0
+ nb = 0
+ a = 0
+ vs = 0
+ 
+ While tr <= 3000000
+   a = Int(InputBox("ingrese una cantidad"))
+     If a > 0 Then
+          sb = sb + 1
+       If a >= 10000 Then
+          vs = vs + 1
+       End If
+     Else
+          nb = nb + 1
+     End If
+     
+ Wend
+ 
+ tr = tr + a
+ promedio = tr / sb
+ MsgBox "si abono: " & sb
+ MsgBox "no abono: " & nb
+ MsgBox "abono mas de 10mil: " & vs
+ MsgBox "total: " & tr
+ MsgBox "promedio: " & promedio
+ 
+ 
+End Sub
+
+```
+## 09 de septiembre 2022
+
+### PROGRAMA
+
+```
+Sub datos()
+    f = 1
+    sw = True
+    
+    c = Int(InputBox("ingrese numero de cedula"))
+    
+    While sw
+        If c = Hoja1.Cells(f, 2) Then
+            n = Hoja1.Cells(f, 1)
+            sw = False
+            MsgBox "Su nombre es: " & n
+        Else
+            MsgBox "numero de documento no registrado"
+            sw = False
+            f = f + 1
+        End If
+    Wend
+    
+End Sub
+
 ```
