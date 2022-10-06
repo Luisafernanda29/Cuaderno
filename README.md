@@ -269,3 +269,76 @@ Sub datos()
     
 End Sub
 ```
+
+## 28 de septiembre 2022
+
+### PROGRAMA DART
+
+```
+void main() {
+ 
+  Operacion operacion = new Operacion();
+  operacion.num1 = 3.5;
+  operacion.num2 = 2.0; 
+  print('la suma es: ${operacion.sumar()}');
+  operacion.restar();
+  print('la multiplicacion es: ${operacion.multiplicar()}');
+  
+ 
+}
+class Operacion{
+  double? num1;
+  double? num2;
+  
+  double sumar(){
+    double s = num1! + num2!; 
+    return s;
+  }
+  
+  void restar(){
+    double r = num1! - num2!; 
+    print('la resta es: $r');    
+  }
+  
+  double multiplicar(){
+    double m = num1! * num2!; 
+    return m;
+  }
+  
+}
+
+```
+
+## 03 de octubre 2022
+
+### PROGRAMA DART2 
+
+```
+void main(){
+  
+  Person person = new Person (n: 'andrea ', s: 'femenino');
+  
+  person.apellido = 'guitierrez';
+  person.edad = 19;
+  print('El nombre completo es: ${person.nombreCompleto()}');
+  person.edadMas(20);
+  
+}
+class Person{
+  String? nombre, apellido, sexo;
+  int? edad;
+  Person({String? n, String? s}){
+    nombre = n; 
+    sexo = s; 
+   }
+  String nombreCompleto(){
+    String nc = nombre! + apellido!;
+    return nc;
+   }
+  void edadMas(int? edm){
+    int num = edad! + edm!;
+    print('La edad sumada es: $num');
+  }
+}
+
+```
