@@ -1,6 +1,7 @@
 # Cuaderno
 Aqui podremos ver mis notas 
 
+## PRIMER PROGRAMA
 ```
 
 # sub cuaderno
@@ -12,7 +13,7 @@ Aqui podremos ver mis notas
 
 ## 26 de agosto 20222
 
-### PROGRAMA:
+### PROGRAMA CONDICIONAL SI 
 
 ```
 
@@ -68,7 +69,7 @@ End Sub
 ```
 ## 26 de agosto 2022
 
-### PROGRAMA:
+### PROGRAMA CASO
 
 ```
 
@@ -112,7 +113,7 @@ End Sub
 
 ## 29 de agosto 2022
 
-### PROGRAMA:
+### PROGRAMA FOR 
 
 ```
 
@@ -132,7 +133,7 @@ End Sub
 
 ## 31 de agosto 2022
 
-### PROGRAMA:
+### PROGRAMA FOR 2
 
 ```
 
@@ -172,7 +173,7 @@ End Sub
 ## 02 de septiembre 2022
 
 
-### PROGRAMA:
+### PROGRAMA FOR 3
 
 ```
 
@@ -191,7 +192,7 @@ End Sub
 ## 02 de septiembre 2022
 
 
-### PROGRAMA:
+### PROGRAMA FOR 4
 
 ```
 Sub lista 
@@ -209,7 +210,7 @@ End sub
 
 ## 09 de septiembre 2022
 
-### PROGRAMA:
+### PROGRAMA CICLO MQ 1
 
 ```
 Sub recolecta()
@@ -246,7 +247,7 @@ End Sub
 
 ## 09 de septiembre 2022
 
-### PROGRAMA
+### PROGRAMA CICLO MQ 2
 
 ```
 Sub datos()
@@ -272,7 +273,7 @@ End Sub
 
 ## 28 de septiembre 2022
 
-### PROGRAMA DART
+### PROGRAMA DART, OBJETOS, CLASES Y METODOS
 
 ```
 void main() {
@@ -311,7 +312,7 @@ class Operacion{
 
 ## 03 de octubre 2022
 
-### PROGRAMA DART2 
+### PROGRAMA TIPOS DE PARAMETROS Y CONTRUCTORES DART
 
 ```
 void main(){
@@ -341,4 +342,198 @@ class Person{
   }
 }
 
+```
+
+## 10 de octubre 2022
+
+### PROGRAMA MANEJO DE CADENAS DART
+```
+void main(){
+ 
+ Empresa empresa1 = new Empresa(numero: 2545, oficina: 'Nestlé', pais: 'Panama');
+ Empresa empresa2 = new Empresa(oficina: 'Luxottica', pais: 'Italia', numero: 1245);
+ Empresa empresa3 = new Empresa(pais: 'Espana', numero: 2365, oficina: 'INDITEX');
+  
+ print("""
+ Empresa 1:
+ 
+ Pais: ${empresa1.pais}
+ Numero: ${empresa1.numero}
+ Oficina: ${empresa1.oficina}
+ Codigo: ${empresa1.generarCodigo()}
+ """);
+ empresa1.cantCaracteres();
+  
+ print("""
+ Empresa 2: 
+ 
+ Pais: ${empresa2.pais}
+ Numero: ${empresa2.numero}
+ Oficina: ${empresa2.oficina}
+ Codigo: ${empresa2.generarCodigo()}
+ """);
+ empresa2.cantCaracteres();
+ 
+ print("""
+ Empresa 3:
+ 
+ Pais: ${empresa3.pais}
+ Numero: ${empresa3.numero}
+ Oficina: ${empresa3.oficina}
+ """);
+ empresa3.cantCaracteres();
+}
+class Empresa{
+  String? pais, oficina;
+  int? numero;
+  
+  Empresa({this.numero, this.oficina, this.pais});
+String generarCodigo(){
+ String? cod = pais!.substring(0,3) + numero!.toString().substring(0,2) + oficina!.substring(oficina!.length - 3);
+ return cod;
+}
+void cantCaracteres(){
+  int cantP = pais!.length;
+  int cantN = numero!.toString().length;
+  int cantO = oficina!.length;
+ print("""
+ Cantidad de caracteres: 
+ Pais: $cantP
+ Numero: $cantN
+ Oficina: $cantO
+""");
+}
+}
+```
+
+## 10 de octubre 2022
+
+### PROGRAMA HERENCIA DART
+```
+void main(){
+  
+  Conejo conejo = new Conejo();
+  
+  conejo.nombre = 'conejo';
+  conejo.edadPromedio = 9;
+  conejo.tiporepro = 'sexual';
+  conejo.alimento = 'zanahoria, lechuga';
+  
+  Leon leon = new Leon();
+  
+  leon.nombre = 'leon';
+  leon.edadPromedio = 15;
+  leon.tiporepro = 'sexual';
+  leon.alimento = 'antilopes, bufalos';
+  
+  Hiena hiena = new Hiena(); 
+  
+  hiena.nombre = 'hiena';
+  hiena.edadPromedio = 25;
+  hiena.tiporepro = 'sexual';
+  hiena.alimento = 'serpientes, lagartos';
+  
+  Hombre hombre = new Hombre();
+  
+  hombre.nombre = 'hombre';
+  hombre.edadPromedio = 72;
+  hombre.tiporepro = 'sexual';
+  hombre.alimento = 'carnes, vegetales, frutas, cereales';
+  
+  print("""
+  animal 1
+  El nombre es: ${conejo.nombre}.
+  La edad promedio es: ${conejo.edadPromedio} anos. 
+  Su tipo de reproduccion es: ${conejo.tiporepro}.
+  Se alimenta de: ${conejo.alimento}.
+  
+  animal 2 
+  El nombre es: ${leon.nombre}.
+  La edad promedio es: ${leon.edadPromedio} anos. 
+  Su tipo de reproduccion es: ${leon.tiporepro}.
+  Se alimenta de: ${leon.alimento}.
+  
+  animal 3
+  El nombre es: ${hiena.nombre}.
+  La edad promedio es: ${hiena.edadPromedio} anos. 
+  Su tipo de reproduccion es: ${hiena.tiporepro}.
+  Se alimenta de: ${hiena.alimento}.
+  
+  animal 4
+  El nombre es: ${hombre.nombre}.
+  La edad promedio es: ${hombre.edadPromedio} anos. 
+  Su tipo de reproduccion es: ${hombre.tiporepro}.
+  Se alimenta de: ${hombre.alimento}.
+  """);
+  
+  
+}
+class Animal{
+  String? nombre;
+  int? edadPromedio;
+  String? tiporepro;
+  String? alimento;
+  
+}
+class Hervivoro extends Animal{
+  String tipo = 'Hervivoro';
+}
+class Conejo extends Hervivoro{}
+class Carnivoro extends Animal{
+  String tipo = 'Carnivoro';
+}
+class Leon extends Carnivoro{}
+class Hiena extends Carnivoro{}
+class Omnivoro extends Animal{
+  String? tipo = 'Omnivoro';
+}
+class Hombre extends Omnivoro{}
+```
+
+## 21 de octubre 2022
+
+### PROGRAMA CLASE ABSTRACTA Y METODOS ESTATICOS DART
+```
+void main() {
+  Vaca vaca = Vaca(); 
+  vaca.emitirSonido();
+  
+  Gato gato = Gato();
+  gato.emitirSonido(); 
+  
+  Perro perro = Perro();
+  perro.emitirSonido();
+  perro.nombre = 'El nombre es: bult';
+  print(perro.nombre);
+  Carnivoro.imc(25,15);
+}
+abstract class Animal{
+  void emitirSonido();
+}
+class Vaca implements Animal{
+  @override
+  void emitirSonido(){
+    print('El sonido de la vaca es: muu'); 
+  }
+}
+class Gato implements Animal{
+  @override
+  void emitirSonido(){
+    print ('El sonido de el gato es: miau');
+  }
+}
+class Carnivoro{
+  String? nombre;
+  
+  static void imc(int altura, int peso){
+    int? calculo = altura * peso;
+    print('La imc es: $calculo');
+  }
+}
+class Perro extends Carnivoro implements Animal{
+  @override
+  void emitirSonido(){
+    print ('El sonido de el perro es: guau');
+  }
+}
 ```
